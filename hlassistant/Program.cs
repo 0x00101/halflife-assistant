@@ -15,7 +15,7 @@ namespace hlassistant
         static void Main()
         {
             LogBuilder lb = new LogBuilder();
-            lb.Init("hla_base/log/" + DateTime.Now.Day + "-" + DateTime.Now.Month + "-" + DateTime.Now.Year + " " + DateTime.Now.Hour + "-" + DateTime.Now.Minute + ".txt");
+            lb.Init("hla_base/log/" + DateTime.Now.Day + "-" + DateTime.Now.Month + "-" + DateTime.Now.Year + " " + DateTime.Now.Hour + "-" + DateTime.Now.Minute + ".log");
 
             if (!File.Exists("hl.exe"))
             {
@@ -40,7 +40,7 @@ namespace hlassistant
         {
             Fileworks fw = new Fileworks();
             LogBuilder lb = new LogBuilder();
-            int debug = fw.ReadInt("debugmode.hla");
+            int debug = fw.ReadInt("hba_base/DebugMode.parm");
 
             if (debug == 0)
             {

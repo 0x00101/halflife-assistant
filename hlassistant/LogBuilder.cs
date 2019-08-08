@@ -16,7 +16,7 @@ namespace hlassistant
             if (File.Exists(filename))
                 writeinitline = false;
 
-            string version = fw.ReadStr("hla_base/version.txt");
+            string version = fw.ReadStr("hla_base/Version.param");
 
             FileStream aFile = new FileStream(filename, FileMode.OpenOrCreate);
             StreamWriter sw = new StreamWriter(aFile);
@@ -30,10 +30,10 @@ namespace hlassistant
             sw.Close();
 
             
-            if (File.Exists("hla_base/CurrentInitializedLogFile.txt"))
+            if (File.Exists("hla_base/CurrentInitializedLogFile.tmp"))
             {
-                File.Delete("hla_base/CurrentInitializedLogFile.txt");
-                fw.WriteString("hla_base/CurrentInitializedLogFile.txt", filename);
+                File.Delete("hla_base/CurrentInitializedLogFile.tmp");
+                fw.WriteString("hla_base/CurrentInitializedLogFile.tmp", filename);
             }
             
         }
@@ -43,7 +43,7 @@ namespace hlassistant
             //говнокод (такие конструкции надо делать в сишарпе что-бы это работало :/) 
             string InsidedFilename = filename;
             if (filename == "nullname13")
-                InsidedFilename = fw.ReadStr("hla_base/CurrentInitializedLogFile.txt");
+                InsidedFilename = fw.ReadStr("hla_base/CurrentInitializedLogFile.tmp");
 
             FileStream aFile = new FileStream(InsidedFilename, FileMode.OpenOrCreate);
             StreamWriter sw = new StreamWriter(aFile);
