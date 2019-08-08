@@ -19,5 +19,15 @@ namespace hlassistant
             StreamReader sr = new StreamReader(filename);
             return Int32.Parse(sr.ReadToEnd());
         }
+
+        public void WriteString(string filename, string content)
+        {
+            FileStream aFile = new FileStream(filename, FileMode.OpenOrCreate);
+            StreamWriter sw = new StreamWriter(aFile);
+            // aFile.Seek(0, SeekOrigin.End);
+            sw.Write(content);
+            sw.Close();
+        }
+
     }
 }

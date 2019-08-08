@@ -27,6 +27,10 @@ namespace hlassistant
                 Term();
             }
 
+            LogBuilder lb = new LogBuilder();
+            lb.Init("hla_base/log/test.txt");
+            lb.AddLine("test");
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LauncherForm());
