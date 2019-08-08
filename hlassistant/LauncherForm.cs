@@ -15,25 +15,32 @@ namespace hlassistant
     {
         public LauncherForm()
         {
+            Fileworks fw = new Fileworks();
+            LogBuilder lb = new LogBuilder();
+
             InitializeComponent();
             if (!Directory.Exists("cstrike"))
             {
                 cscbx.Enabled = false;
+                lb.AddLine("cstrike folder not found. cscbx radiobtn disabled.");
             }
 
             if (!Directory.Exists("ag"))
             {
                 agcbx.Enabled = false;
+                lb.AddLine("ag folder not found. agcbx radiobtn disabled.");
             }
 
             if (!Directory.Exists("bshift"))
             {
                 bscbx.Enabled = false;
+                lb.AddLine("bshift folder not found. bscbx radiobtn disabled.");
             }
 
             if (!Directory.Exists("gearbox"))
             {
                 ofcbx.Enabled = false;
+                lb.AddLine("gearbox folder not found. ofcbx radiobtn disabled.");
             }
         }
 
@@ -56,7 +63,7 @@ namespace hlassistant
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("debugmode.hla");
+            StreamReader sr = new StreamReader("hla_base/DebugMode.txt");
             int debug = Int32.Parse(sr.ReadToEnd());
             sr.Close();
 
