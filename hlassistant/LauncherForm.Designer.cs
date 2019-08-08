@@ -39,7 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.c_nofbo = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -166,15 +166,15 @@
             this.comboBox1.Tag = "";
             this.comboBox1.Text = "Не выбрано";
             // 
-            // checkBox1
+            // c_nofbo
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(460, 59);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(56, 17);
-            this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = "-nofbo";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.c_nofbo.AutoSize = true;
+            this.c_nofbo.Location = new System.Drawing.Point(460, 59);
+            this.c_nofbo.Name = "c_nofbo";
+            this.c_nofbo.Size = new System.Drawing.Size(56, 17);
+            this.c_nofbo.TabIndex = 10;
+            this.c_nofbo.Text = "-nofbo";
+            this.c_nofbo.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -184,6 +184,7 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "Запуск";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
@@ -207,11 +208,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(543, 210);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.c_nofbo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
@@ -223,6 +225,8 @@
             this.Controls.Add(this.ofcbx);
             this.Controls.Add(this.hlcbx);
             this.Controls.Add(this.cscbx);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LauncherForm";
             this.Text = "Half-Life Assistant";
             this.ResumeLayout(false);
@@ -243,7 +247,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox c_nofbo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
