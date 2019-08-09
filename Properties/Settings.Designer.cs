@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace hlassistant.Properties
+namespace csharp.progman.halflifeassistant.Properties
 {
 
 

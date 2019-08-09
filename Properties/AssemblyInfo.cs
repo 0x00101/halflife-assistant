@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанных со сборкой.
-[assembly: AssemblyTitle("hlassistant")]
+[assembly: AssemblyTitle("csharp.progman.halflifeassistant")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("hlassistant")]
+[assembly: AssemblyProduct("csharp.progman.halflifeassistant")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("480950ed-7ef6-4406-a72b-19c64e10acbd")]
+[assembly: Guid("025248cc-74f6-4f7e-8bdf-e6896703f059")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //
